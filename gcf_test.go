@@ -16,7 +16,7 @@ import (
 // }
 
 func TestGeneratePasswordHash(t *testing.T) {
-	password := "gisajacuy"
+	password := "giscroott"
 	hash, _ := HashPassword(password) // ignore error for the sake of simplicity
 	fmt.Println("Password:", password)
 	fmt.Println("Hash:    ", hash)
@@ -36,7 +36,7 @@ func TestHashFunction(t *testing.T) {
 	mconn := SetConnection("MONGOSTRING", "Giscroot")
 	var userdata User
 	userdata.Username = "fahadganteng"
-	userdata.Password = "gisacroott"
+	userdata.Password = "giscroott"
 
 	filter := bson.M{"username": userdata.Username}
 	res := atdb.GetOneDoc[User](mconn, "user", filter)
@@ -52,7 +52,7 @@ func TestIsPasswordValid(t *testing.T) {
 	mconn := SetConnection("MONGOSTRING", "Giscroot")
 	var userdata User
 	userdata.Username = "fahadganteng"
-	userdata.Password = "gisacroott"
+	userdata.Password = "giscroott"
 
 	anu := IsPasswordValid(mconn, "user", userdata)
 	fmt.Println(anu)
@@ -62,7 +62,7 @@ func TestInsertUser(t *testing.T) {
 	mconn := SetConnection("MONGOSTRING", "Giscroot")
 	var userdata User
 	userdata.Username = "fahadganteng"
-	userdata.Password = "gisacroott"
+	userdata.Password = "giscroott"
 
 	nama := InsertUser(mconn, "user", userdata)
 	fmt.Println(nama)
