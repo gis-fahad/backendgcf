@@ -61,8 +61,8 @@ func TestIsPasswordValid(t *testing.T) {
 func TestInsertUser(t *testing.T) {
 	mconn := SetConnection("MONGOSTRING", "GismongoDB")
 	var userdata User
-	userdata.Username = "fahadaja"
-	userdata.Password = "hoream"
+	userdata.Username = "fahad"
+	userdata.Password = "mager"
 
 	nama := InsertUser(mconn, "user", userdata)
 	fmt.Println(nama)
